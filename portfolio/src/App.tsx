@@ -1,8 +1,18 @@
 import React from "react";
-import styled from "styled-components";
+import { GlobalStyle } from "./components/styles/globalStyle";
+import WatterMark from "./components/atom/WatterMark";
+import Header from "./components/atom/Header";
+import Router from "./router/Router";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <GlobalStyle />
+      <Header />
+      <Router />
+      <WatterMark />
+    </>
+  );
 }
 
 export default App;

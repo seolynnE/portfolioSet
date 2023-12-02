@@ -161,6 +161,17 @@ export const ResetStyle = css`
     font-family: "SUITE-Regular";
     background-color: ${(props) => props.theme.bgColor};
     color: ${(props) => props.theme.textColor};
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background-color: gray;
+    }
+    &::-webkit-scrollbar-button {
+      width: 0;
+      height: 0;
+    }
   }
   a {
     color: inherit;
@@ -169,5 +180,11 @@ export const ResetStyle = css`
   button {
     border: 0;
     cursor: pointer;
+  }
+  ::-moz-selection {
+    background: #f6e58d;
+  }
+  ::selection {
+    background: #f6e58d;
   }
 `;

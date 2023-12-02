@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const HomeWrap = styled.div`
@@ -8,6 +9,10 @@ const HomeWrap = styled.div`
   padding-top: 80px;
   padding-left: 80px;
   background-color: ${(props) => props.theme.colors.point};
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select:none;
   h1 {
     font-size: 0;
   }
@@ -382,10 +387,10 @@ function Menu(props: MenuProps) {
   return (
     <MenuWrap className={props.className}>
       <nav>
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
+        <Link to="/">HOME</Link>
+        <Link to="/about">ABOUT</Link>
         <a href="#">WORK</a>
-        <a href="#">CONTECT</a>
+        <Link to="/contect">CONTECT</Link>
       </nav>
       <div className="slide left" />
       <div className="slide right">

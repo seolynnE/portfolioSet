@@ -9,6 +9,10 @@ const Title = styled.div`
   width: 540px;
   height: 540px;
   z-index: 10;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   &::after {
     content: "";
     display: block;
@@ -49,8 +53,8 @@ const Title = styled.div`
     left: unset;
     width: fit-content;
     height: fit-content;
-    margin-top: 30px;
-    margin-bottom: -20px;
+    margin-top: 60px;
+    margin-bottom: -38px;
     &::after {
       top: -12px;
       left: -14px;
@@ -73,7 +77,7 @@ interface ITitleProps {
 }
 
 /**
- * @param text 버튼 텍스트
+ * @param text 텍스트
  * @param className 클레스 네임
  */
 

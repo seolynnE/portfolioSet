@@ -1,14 +1,20 @@
 import styled from "styled-components";
 import Container from "../layout/Container";
 import Button from "../atom/Button";
+import workData from "../../data/work.json";
+import { Link, useParams } from "react-router-dom";
+import Loading from "../atom/Loading";
 
 const WorkViewWrap = styled.div`
   .description-box {
     justify-content: space-between;
     flex-direction: row-reverse;
     padding-top: 80px;
-    > * {
-      width: calc(100% / 2 - 40px);
+    > ul:first-child {
+      width: 60%;
+    }
+    > ul:last-child {
+      width: 34%;
     }
 
     @media (max-width: 800px) {
@@ -16,7 +22,7 @@ const WorkViewWrap = styled.div`
       flex-direction: column;
       padding-top: 40px;
       > * {
-        width: 100%;
+        width: 100% !important;
       }
     }
   }
@@ -34,7 +40,7 @@ const Title = styled.div`
     letter-spacing: -0.4px;
   }
   @media (max-width: 800px) {
-    padding: 40px 20px;
+    padding: 40px;
     font-size: 32px;
   }
 `;
@@ -63,6 +69,7 @@ const Describtion = styled.ul`
     div {
       display: flex;
       align-items: center;
+      word-break: keep-all;
     }
     p {
       width: 46px;
@@ -88,77 +95,121 @@ const Describtion = styled.ul`
   @media (max-width: 800px) {
     position: relative;
     top: unset;
+    .skill {
+      div {
+        align-items: flex-start;
+      }
+    }
   }
 `;
-const ImgBoxWrap = styled.div`
+const ImgBoxWrap = styled.ul`
   box-sizing: border-box;
-  > * {
+  li {
     margin-bottom: 12px;
     img {
       width: 100%;
+      box-shadow: 0 0 20px 0 #e5e5e5;
     }
   }
 `;
 
-function DescribtionEl() {
+interface WorkProps {
+  work: {
+    title?: string;
+    subTitle?: string;
+    contribution?: string;
+    skill?: string;
+    description?: string;
+    site?: string;
+    mainImg?: string;
+    imgA?: string;
+    imgB?: string;
+    imgC?: string;
+    imgD?: string;
+  };
+}
+
+function DescribtionEl({ work }: WorkProps) {
+  const handleGoBack = () => {
+    window.history.back();
+  };
   return (
     <Describtion>
       <li className="title">
-        <h3>Title</h3>
-        <p>subTitle</p>
+        <h3>{work.title}</h3>
+        <p>{work.subTitle}</p>
       </li>
       <li className="skill">
         <div>
           <p>기여도</p>
           <span>
-            <b>|</b> 퍼블리싱80%
+            <b>|</b> {work.contribution}
           </span>
         </div>
         <div>
           <p>SKILL</p>
           <span>
-            <b>|</b> HTML5 SCSS Javascript
+            <b>|</b> {work.skill}
           </span>
         </div>
       </li>
       <li className="description">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-          ipsum itaque ratione! Veritatis vitae provident illum similique
-          dolores nemo, cum laborum accusamus velit consequuntur sint iste iusto
-          harum, veniam eligendi?
-        </p>
+        <p>{work.description}</p>
       </li>
       <li className="nav">
-        <Button text="GO BACK" />
-        <Button text="VISIT SITE" />
+        <Button text="GO BACK" onClick={handleGoBack} />
+        {work.site && (
+          <Link to={work.site} target="_blank">
+            <Button text="VISIT SITE" />
+          </Link>
+        )}
       </li>
     </Describtion>
   );
 }
 
-function ImageEl() {
+function ImageEl({ work }: WorkProps) {
   return (
     <ImgBoxWrap>
-      <div>
-        <img src="https://art-1995.github.io/img/ziqnft1.png" />
-      </div>
-      <div>
-        <img src="https://art-1995.github.io/img/ziqnft1.png" />
-      </div>
+      {work.imgA && (
+        <li>
+          <img src={work.imgA} alt={work.title} />
+        </li>
+      )}
+      {work.imgB && (
+        <li>
+          <img src={work.imgB} alt={work.title} />
+        </li>
+      )}
+      {work.imgC && (
+        <li>
+          <img src={work.imgC} alt={work.title} />
+        </li>
+      )}
+      {work.imgD && (
+        <li>
+          <img src={work.imgD} alt={work.title} />
+        </li>
+      )}
     </ImgBoxWrap>
   );
 }
 
 function WorkView() {
+  const { title } = useParams();
+  const selectedWork = workData.work.find((work) => work.title === title);
+
+  if (!selectedWork) {
+    return <Loading />;
+  }
   return (
     <WorkViewWrap>
       <Title>
-        <h2>This is Test</h2>
+        <h2>{selectedWork.title}</h2>
       </Title>
       <Container className="description-box">
-        <DescribtionEl />
-        <ImageEl />
+        <DescribtionEl work={selectedWork} />
+        <ImageEl work={selectedWork} />
       </Container>
     </WorkViewWrap>
   );

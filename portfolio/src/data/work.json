@@ -7,7 +7,12 @@
       "contribution": "디자인(50%) | 마크업(60%)",
       "skill": "HTML5 | CSS | Jquery | Figma | ILLustrator | Blender",
       "description": "메인 화면 디자인, 로그인&회원가입 화면과 마이페이지 화면의 디자인 및 마크업을 담당했습니다. 반응형으로 제작되어 디바이스 기종 제한 없이 사용이 가능합니다. 하나의 저장소로 협업하는 Git Lab을 다루는 법을 익혔습니다. Blender를 이용해 기존의 3D작업물을 수정하는 법을 익혔습니다. 현재 서비스가 종료되었습니다.",
-      "site?": ""
+      "site": "",
+      "mainImg": "/image/ziqworld.png",
+      "imgA": "/image/ziqworld1.png",
+      "imgB": "/image/ziqworld2.png",
+      "imgC": "/image/ziqworld3.png",
+      "imgD": "/image/ziqworld4.png"
     },
     {
       "id": 1,
@@ -16,7 +21,10 @@
       "contribution": "디자인(80%) | 마크업(60%)",
       "skill": "HTML5 | CSS | Jquery | Figma | ILLustrator | Photoshop | Blender",
       "description": "NFT마켓 컨셉의 Template 구매 후 리디자인 및 추가 마크업을 진행하였습니다. 반응형으로 제작되어 디바이스 기종 제한 없이 사용이 가능합니다. 프로젝트는 React를 기반으로 진행이 되었으나 당시 React에 대한 지식이 전무해 HTML5로 마크업을 진행하였고, 이를 계기로 업무 효율성을 높이기 위해 React에 대해 공부하게 되었습니다.  현재 서비스가 종료되었습니다.",
-      "site?": ""
+      "site": "",
+      "mainImg": "/image/ziqnft.png",
+      "imgA": "/image/ziqnft1.png",
+      "imgB": "/image/ziqnft2.png"
     },
     {
       "id": 2,
@@ -25,7 +33,10 @@
       "contribution": "퍼블리싱(100%)",
       "skill": "HTML5 | CSS | Jquery | Figma",
       "description": "기업과 플랫폼 소개 페이지 등 다양한 원페이지를 마크업 했습니다. 디자이너가 의도한 디자인과 애니메이션을 보다 정확하게 구현해 내기 위해 노력했으며, 반응형으로 제작되어 디바이스 기종 제한 없이 사용이 가능합니다.",
-      "site?": "https://develock.com/"
+      "site": "https://develock.com/",
+      "mainImg": "/image/develock.png",
+      "imgA": "/image/develock1.png",
+      "imgB": "/image/develock2.png"
     },
     {
       "id": 3,
@@ -34,7 +45,9 @@
       "contribution": "퍼블리싱(100%)",
       "skill": "HTML5 | SCSS | Javascript | Figma",
       "description": "렌트카 사이트의 마크업을 진행하였습니다. 추후 타 사이트에도 본 사이트의 디자인을 적용하고자 하는 의견이 있어 브랜드의 포인트컬러만 다르게 적용할 수 있도록 만들었습니다.",
-      "site?": "https://skt.kbwiserent.co.kr/"
+      "site": "https://skt.kbwiserent.co.kr/",
+      "mainImg": "/image/kb.png",
+      "imgA": "/image/kb1.png"
     },
     {
       "id": 4,
@@ -43,7 +56,9 @@
       "contribution": "퍼블리싱(100%)",
       "skill": "HTML5 | SCSS | Javascript | Figma",
       "description": "이벤트성 페이지 입니다. 스크롤이 내려가 특정 구역을 지날 때 menu에 event가 작동되게 작업하였습니다.",
-      "site?": ""
+      "site": "",
+      "mainImg": "/image/kbXkakao.png",
+      "video": "/image/kbXkakao1.png"
     },
     {
       "id": 5,
@@ -52,34 +67,32 @@
       "contribution": "퍼블리싱(100%)",
       "skill": "HTML5 | SCSS | Javascript | figma",
       "description": "간단한 원페이지 기업 소개 사이트 입니다. 고객이 간편하게 문의할 수 있도록 사이트 내에 Google email form을 사용하였습니다.",
-      "site?": "https://www.doublead.io"
+      "site": "https://www.doublead.io",
+      "mainImg": "/image/double-ad.png",
+      "imgA": "/image/double-ad1.png",
+      "imgB": "/image/double-ad2.png"
     },
     {
       "id": 6,
-      "title": "템플릿",
+      "title": "Template",
       "subTitle": "사이트 템플릿 구축",
       "contribution": "퍼블리싱(100%)",
       "skill": "HTML5 | SCSS | Javascript | figma",
       "description": "여러 사이트에 활용 가능한 템플릿을 구축하였습니다. 손쉽게 사용할 수 있도록 타입 별로 component를 세분화 하여 제작했습니다.",
-      "site?": "https://dfast.kr/"
+      "site": "https://dfast.kr/",
+      "mainImg": "/image/template.png",
+      "imgA": "/image/template1.png"
     },
     {
       "id": 7,
       "title": "네이트뷰",
       "subTitle": "네이트뷰 리디자인 참여",
-      "contribution": "헤더&푸터 | 카테고리 | 태그뷰 | 기자뷰 | 서치뷰 | 공유하기UI | 약관페이지",
+      "contribution": "헤더&푸터 | 카테고리 | 태그뷰 | 기자뷰 | 서치뷰 | 공유하기UI | 약관페이지 | 404",
       "skill": "React | TypeScript | figma",
       "description": "기존에 WordPress로 제작되어있던 네이트뷰 페이지를 리액트로 전환하는 프로젝트에 참여했습니다. 이 프로젝트를 통해 TypeScript와 API연동에 대한 경험을 쌓을 수 있었습니다. 프론트 업무는 익숙하지 않아 초기 학습 곡선이 높았지만 프로젝트에 적용하는 과정에서 실력을 향상시킬 수 있었습니다.",
-      "site?": "https://view.nate.com/"
-    },
-    {
-      "id": 8,
-      "title": "",
-      "subTitle": "",
-      "contribution": "",
-      "skill": "",
-      "description": "",
-      "site?": ""
+      "site": "https://view.nate.com/",
+      "mainImg": "/image/nateView.png",
+      "imgA": "/image/nateView1.png"
     }
   ]
 }

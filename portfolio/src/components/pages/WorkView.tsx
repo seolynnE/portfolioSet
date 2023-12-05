@@ -11,10 +11,10 @@ const WorkViewWrap = styled.div`
     flex-direction: row-reverse;
     padding-top: 80px;
     > ul:first-child {
-      width: 60%;
+      width: 34%;
     }
     > ul:last-child {
-      width: 34%;
+      width: 60%;
     }
 
     @media (max-width: 800px) {
@@ -110,6 +110,14 @@ const ImgBoxWrap = styled.ul`
       width: 100%;
       box-shadow: 0 0 20px 0 #e5e5e5;
     }
+    &.m-var {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: fit-content;
+      }
+    }
   }
 `;
 
@@ -126,6 +134,7 @@ interface WorkProps {
     imgB?: string;
     imgC?: string;
     imgD?: string;
+    mobileImgA?: string;
   };
 }
 
@@ -189,6 +198,11 @@ function ImageEl({ work }: WorkProps) {
       {work.imgD && (
         <li>
           <img src={work.imgD} alt={work.title} />
+        </li>
+      )}
+      {work.mobileImgA && (
+        <li className="m-var">
+          <img src={work.mobileImgA} alt={work.title} />
         </li>
       )}
     </ImgBoxWrap>

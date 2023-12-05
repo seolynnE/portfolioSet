@@ -12,7 +12,7 @@ const HomeWrap = styled.div`
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select:none;
+  user-select: none;
   h1 {
     font-size: 0;
   }
@@ -389,7 +389,7 @@ function Menu(props: MenuProps) {
       <nav>
         <Link to="/">HOME</Link>
         <Link to="/about">ABOUT</Link>
-        <a href="#">WORK</a>
+        <Link to="/work">WORK</Link>
         <Link to="/contect">CONTECT</Link>
       </nav>
       <div className="slide left" />

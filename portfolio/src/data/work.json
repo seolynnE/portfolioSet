@@ -58,7 +58,7 @@
       "description": "이벤트성 페이지 입니다. 스크롤이 내려가 특정 구역을 지날 때 menu에 event가 작동되게 작업하였습니다.",
       "site": "",
       "mainImg": "/image/kbXkakao.png",
-      "video": "/image/kbXkakao1.png"
+      "mobileImgA": "/image/kbXkakao1.gif"
     },
     {
       "id": 5,

@@ -25,9 +25,11 @@ const HomeWrap = styled.div`
       padding-left: 60px;
     }
   }
-  @media (max-width: 800px) {
+  @media (max-width: 1280px){
     padding-top: 40px;
     padding-left: 40px;
+  }
+  @media (max-width: 800px) {
     .title {
       font-size: 40px;
       p:last-child {
@@ -134,6 +136,9 @@ const Btn = styled.button`
     100% {
       transform: rotate(360deg);
     }
+  }
+  @media (max-width: 1280px){
+    top: 60%
   }
   @media (max-width: 800px) {
     width: 100px;

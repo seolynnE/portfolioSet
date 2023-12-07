@@ -26,6 +26,9 @@ const ContectWrap = styled.div`
       padding-top: 120px;
     }
   }
+  @media (max-width: 1280px) {
+    padding-top: 160px;
+  }
   @media (max-width: 1024px) {
     .container {
       padding-top: 0;

@@ -26,6 +26,11 @@ const AboutWrap = styled.div`
       padding-top: 120px;
     }
   }
+  @media (max-width: 1280px) {
+    .container {
+      padding-top: 160px;
+    }
+  }
   @media (max-width: 1024px) {
     .container {
       padding-top: 0;
@@ -128,16 +133,16 @@ function Career() {
       <h3>경력</h3>
       <ul>
         <li>
+          <p className="date">2022.09~2023.07</p>
+          <p className="title">(주)패스트뷰 개발기획팀 매니저</p>
+          <p className="sub-content">퍼블리싱</p>
+        </li>
+        <li>
           <p className="date">2021.07~2022.09</p>
           <p className="title">
             (주)디벨록 정보전산실 프론트엔드 디자이너 주임
           </p>
           <p className="sub-content">퍼블리싱 + 디자인</p>
-        </li>
-        <li>
-          <p className="date">2022.09~2023.07</p>
-          <p className="title">(주)패스트뷰 개발기획팀 매니저</p>
-          <p className="sub-content">퍼블리싱</p>
         </li>
       </ul>
     </Wrap>

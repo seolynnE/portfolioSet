@@ -76,7 +76,9 @@ const Describtion = styled.ul`
       padding-bottom: 2px;
       font-weight: bold;
     }
-    b {
+    span::before {
+      content: "|";
+      margin-left: 2px;
       font-weight: bold;
     }
   }
@@ -91,6 +93,16 @@ const Describtion = styled.ul`
     display: flex;
     gap: 6px;
     padding-bottom: 40px;
+  }
+  @media (max-width: 1280px) {
+    .skill span::before {
+      display: none;
+    }
+    div {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 6px;
+    }
   }
   @media (max-width: 800px) {
     position: relative;
@@ -151,15 +163,11 @@ function DescribtionEl({ work }: WorkProps) {
       <li className="skill">
         <div>
           <p>기여도</p>
-          <span>
-            <b>|</b> {work.contribution}
-          </span>
+          <span>{work.contribution}</span>
         </div>
         <div>
           <p>SKILL</p>
-          <span>
-            <b>|</b> {work.skill}
-          </span>
+          <span>{work.skill}</span>
         </div>
       </li>
       <li className="description">

@@ -27,6 +27,11 @@ const WorkWrap = styled.div`
       padding-left: 100px;
     }
   }
+  @media (max-width: 1280px) {
+    .container {
+      padding-top: 160px;
+    }
+  }
   @media (max-width: 1024px) {
     .container {
       padding-top: 0;

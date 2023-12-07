@@ -95,13 +95,15 @@ const Describtion = styled.ul`
     padding-bottom: 40px;
   }
   @media (max-width: 1280px) {
-    .skill span::before {
-      display: none;
-    }
-    div {
-      flex-direction: column;
-      align-items: flex-start;
-      padding-bottom: 6px;
+    .skill {
+      div {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 6px;
+      }
+      span::before {
+        display: none;
+      }
     }
   }
   @media (max-width: 800px) {

@@ -78,7 +78,7 @@ const Describtion = styled.ul`
     }
     span::before {
       content: "|";
-      margin-left: 2px;
+      margin: 0 4px 0 2px;
       font-weight: bold;
     }
   }
